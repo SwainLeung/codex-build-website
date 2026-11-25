@@ -1,0 +1,23 @@
+{
+  "name": "windows-browser-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A local-only Playwright bridge for repeatable Windows browser snapshots and health checks.",
+  "scripts": {
+    "install:chromium": "playwright install chromium",
+    "install:browsers": "npm run install:chromium",
+    "health": "node src/cli.mjs health",
+    "snapshot": "node src/cli.mjs snapshot",
+    "serve": "node src/cli.mjs serve",
+    "test": "node --test test/browser.test.mjs",
+    "test:e2e": "node --test test/e2e.test.mjs",
+    "check": "npm test && npm run test:e2e && npm run health"
+  },
+  "dependencies": {
+    "playwright": "^1.57.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

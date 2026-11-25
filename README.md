@@ -47,3 +47,7 @@ python scripts/harness.py check
 ## Release
 
 Build output is the Vite `dist/` directory. Before any hosting release, fill the candidate SHA and evidence in `docs/harness/releases/v0.1.0.md`. Do not publish the local source transcript, credentials, or unlicensed reference imagery.
+
+## Reusable Windows browser bridge
+
+`tools/windows-browser-bridge/` packages a local-only Playwright browser bridge for visual smoke checks on Windows. It uses installed Chrome or Edge by default, requires a per-session token for its localhost snapshot service, and keeps images/metadata out of Git. See `tools/windows-browser-bridge/README.md` for installation and usage.

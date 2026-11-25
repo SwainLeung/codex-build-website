@@ -33,3 +33,7 @@
 ## Configuration and access
 
 No runtime secrets, account permissions, server data, or third-party API credentials are required. The only browser persistence is a user-local checklist value.
+
+## Tool companions
+
+`tools/windows-browser-bridge/` is a separately installable Playwright utility for Windows-local visual verification. Its own lockfile, tests, token requirement, local-only service binding, source rules, and diagnostic record live within that directory. The root harness runs its deterministic unit tests; the Chrome/Edge health smoke is intentionally run by the tool owner because browser availability is machine-specific.
