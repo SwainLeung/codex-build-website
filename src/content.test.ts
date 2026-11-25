@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { checklistItems, operatingLayers, referenceHygiene, stages, tensions } from './content'
+import { checklistItems, gscEvidenceLoop, operatingLayers, referenceHygiene, stages, tensions } from './content'
 
 describe('website system content', () => {
   it('contains a complete seven-stage delivery loop', () => {
@@ -15,5 +15,10 @@ describe('website system content', () => {
   it('adds the reusable site operating model without private reference data', () => {
     expect(operatingLayers).toHaveLength(5)
     expect(referenceHygiene).toHaveLength(4)
+  })
+
+  it('makes the GSC iteration loop offline, reviewable, and non-automatic', () => {
+    expect(gscEvidenceLoop).toHaveLength(4)
+    expect(gscEvidenceLoop.map((step) => step.title)).toContain('候选而非自动化')
   })
 })

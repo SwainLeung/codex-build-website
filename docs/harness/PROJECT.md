@@ -18,6 +18,7 @@
 | User entry | Modules | Data or dependency | Failure / observation | Owner |
 | --- | --- | --- | --- | --- |
 | Open page, select stage, check launch item, copy brief | `src/App.tsx`, `src/content.ts`, `src/styles.css` | Browser `localStorage` for checklist only; Google Fonts CSS | Selected stage does not update, copy fails, layout overflows | Repository owner |
+| Record a future search-evidence iteration | `docs/operations/GSC-EVIDENCE-LOOP.md`, `docs/templates/`, `scripts/verify-gsc-evidence.mjs` | Offline, redacted aggregate summary only | Privacy/input gate blocks the record; candidate remains proposed without owner approval | Repository owner |
 
 ## Clean-environment reproduction
 
@@ -32,7 +33,7 @@
 
 ## Configuration and access
 
-No runtime secrets, account permissions, server data, or third-party API credentials are required. The only browser persistence is a user-local checklist value.
+No runtime secrets, account permissions, server data, or third-party API credentials are required. The only browser persistence is a user-local checklist value. A future search-evidence loop accepts only an offline, redacted aggregate summary and does not include a live GSC connection.
 
 ## Tool companions
 

@@ -40,6 +40,13 @@ export const referenceHygiene = [
   '共享脚本/工具只通过明确版本与入口复用；不要拷贝运行时、凭据或环境绑定。',
 ]
 
+export const gscEvidenceLoop = [
+  { number: '01', title: '脱敏输入', detail: '只保留聚合趋势、置信度与匿名证据；原始查询、页面地址、导出文件和凭据停留在仓库外。' },
+  { number: '02', title: '双窗口对照', detail: '明确基线与比较窗口，分别记录可见性、点击与收录覆盖信号，避免用单一指标下结论。' },
+  { number: '03', title: '候选而非自动化', detail: '把发现写成可回退的假设和候选动作；每个动作都需要负责人审批，不能直接改站或发布。' },
+  { number: '04', title: '发布后回测', detail: '沿用同一组聚合信号进行观察；只有有证据的改善才保留，负面或不确定结果进入回退或复盘。' },
+]
+
 export const checklistItems = [
   '写清受众、产品价值和唯一的主要 CTA',
   '将稳定项目上下文写入 AGENTS.md',

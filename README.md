@@ -53,6 +53,20 @@ The site now includes a generalized operating model for content, assets, validat
 - `docs/templates/SITE_PROFILE.example.yml` — safe, non-sensitive site contract template.
 - `docs/templates/CONTENT_ASSET_RECORD.example.md` — lifecycle, rights, and privacy record template.
 
+## Offline search-evidence iteration
+
+The repository contains a generic, GSC-compatible evidence loop for deciding whether a future site change should be proposed, measured, retained, or rolled back. It accepts only redacted aggregate summaries and never stores live API configuration, raw queries, page URLs, exports, domains, or credentials.
+
+- `docs/operations/GSC-EVIDENCE-LOOP.md` — boundary, gates, and lifecycle.
+- `docs/templates/GSC_EVIDENCE_SUMMARY.example.json` — validated aggregate-only input schema.
+- `docs/templates/GSC_ITERATION_RECORD.example.md` — approval and measurement record.
+
+Validate the included schema example with:
+
+```bash
+npm run check:gsc-evidence
+```
+
 ## Release
 
 Build output is the Vite `dist/` directory. Before any hosting release, fill the candidate SHA and evidence in `docs/harness/releases/v0.1.0.md`. Do not publish the local source transcript, credentials, or unlicensed reference imagery.

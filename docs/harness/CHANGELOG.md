@@ -11,3 +11,4 @@ The root [`CHANGELOG.md`](../../CHANGELOG.md) is the formal user-visible change 
 | Type | User impact / migration | Issue / PR / IDEA |
 | --- | --- | --- |
 | Added | The user can interact with a seven-stage playbook, tradeoff analysis, brief, and checklist; no migration required. | ISSUE-001 / first commit / IDEA-001 |
+| Added | Maintainers can record a validated, redacted search-evidence iteration without adding a live external integration. | ISSUE-004 / local candidate / GSC evidence loop |

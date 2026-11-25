@@ -22,6 +22,13 @@ Use this before creating a release candidate. The browser checklist is a conveni
 - [ ] A content or asset lifecycle state, source category, rights status, and quarantine rule are documented where applicable.
 - [ ] Shared tooling is reused through an owned entry point; no active runtime, queue, cache, or environment configuration was copied.
 
+## Search evidence loop
+
+- [ ] Any search-performance input is an offline, redacted aggregate summary; raw queries, page URLs, exports, domains, and credentials stay outside Git.
+- [ ] `npm run check:gsc-evidence` passes for the summary schema before a candidate is discussed.
+- [ ] Every proposed action is reversible, names a measured signal and uncertainty, and has explicit owner approval.
+- [ ] No search-evidence record directly edits, deploys, or publishes a site; ordinary review and release gates still apply.
+
 ## Engineering and release
 
 - [ ] `npm run lint`, `npm run check:content`, `npm test`, and `npm run build` pass on the candidate commit.

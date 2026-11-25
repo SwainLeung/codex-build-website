@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { checklistItems, operatingLayers, promptTemplate, referenceHygiene, stages, tensions } from './content'
+import { checklistItems, gscEvidenceLoop, operatingLayers, promptTemplate, referenceHygiene, stages, tensions } from './content'
 
 const storageKey = 'codex-website-system-checklist'
 
@@ -49,6 +49,7 @@ function App() {
         <nav aria-label="页面导航">
           <a href="#stages">七阶段</a>
           <a href="#operating-model">运营模型</a>
+          <a href="#evidence-loop">迭代闭环</a>
           <a href="#tensions">冲突对照</a>
           <a href="#launch">启动清单</a>
         </nav>
@@ -108,6 +109,14 @@ function App() {
           {operatingLayers.map((layer) => <article className="operating-card" key={layer.number}><span>{layer.number}</span><h3>{layer.title}</h3><p>{layer.summary}</p><code>{layer.asset}</code></article>)}
         </div>
         <div className="hygiene-note"><div><p className="section-label">REFERENCE HYGIENE</p><h3>让参考变成能力，<em>不是泄露面。</em></h3></div><ol>{referenceHygiene.map((item) => <li key={item}>{item}</li>)}</ol></div>
+      </section>
+
+      <section className="evidence shell" id="evidence-loop">
+        <div className="section-heading"><p className="section-label">SEARCH EVIDENCE LOOP</p><p>把搜索表现作为可审查的迭代证据，不把账户、原始导出或自动发布能力带进项目。</p></div>
+        <div className="evidence-grid">
+          {gscEvidenceLoop.map((step) => <article className="evidence-card" key={step.number}><span>{step.number}</span><h3>{step.title}</h3><p>{step.detail}</p></article>)}
+        </div>
+        <p className="evidence-foot">离线模板与校验入口：<code>docs/operations/GSC-EVIDENCE-LOOP.md</code> · <code>npm run check:gsc-evidence</code></p>
       </section>
 
       <section className="tensions" id="tensions">

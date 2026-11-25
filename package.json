@@ -7,8 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "test": "vitest run",
-    "check:content": "node scripts/verify-content.mjs && node scripts/verify-reference-hygiene.mjs",
+    "test": "vitest run && npm run test:gsc-evidence",
+    "test:gsc-evidence": "node --test scripts/verify-gsc-evidence.node-test.mjs",
+    "check:gsc-evidence": "node scripts/verify-gsc-evidence.mjs",
+    "check:content": "node scripts/verify-content.mjs && node scripts/verify-reference-hygiene.mjs && npm run check:gsc-evidence",
     "preview": "vite preview"
   },
   "dependencies": {

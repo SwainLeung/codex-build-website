@@ -5,3 +5,8 @@ source/
 scripts/scripts/
 *.tsbuildinfo
 .DS_Store
+
+# Private Search Console exports and site-specific analysis must remain local.
+gsc-private/
+reports/gsc/
+*.gsc-evidence.private.json

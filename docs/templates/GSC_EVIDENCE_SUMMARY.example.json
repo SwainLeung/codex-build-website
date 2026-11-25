@@ -1,0 +1,33 @@
+{
+  "schema_version": "gsc-evidence-summary@1.0.0",
+  "source_mode": "offline-redacted-summary",
+  "contains_raw_queries": false,
+  "contains_page_urls": false,
+  "contains_credentials": false,
+  "periods": {
+    "baseline": "window-a",
+    "comparison": "window-b"
+  },
+  "signals": {
+    "impressions_direction": "up",
+    "clicks_direction": "flat",
+    "index_coverage_direction": "unknown"
+  },
+  "observations": [
+    {
+      "signal": "visibility",
+      "evidence": "An aggregate trend changed between the two windows.",
+      "confidence": "medium"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "candidate-001",
+      "hypothesis": "Improve one reviewed content cluster and re-measure the same aggregate signal.",
+      "expected_signal": "impressions",
+      "risk": "low",
+      "requires_owner_approval": true,
+      "status": "proposed"
+    }
+  ]
+}
