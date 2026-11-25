@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { checklistItems, stages, tensions } from './content'
+import { checklistItems, operatingLayers, referenceHygiene, stages, tensions } from './content'
 
 describe('website system content', () => {
   it('contains a complete seven-stage delivery loop', () => {
@@ -10,5 +10,10 @@ describe('website system content', () => {
   it('keeps governance and conflict review visible', () => {
     expect(tensions.length).toBeGreaterThanOrEqual(4)
     expect(checklistItems).toHaveLength(7)
+  })
+
+  it('adds the reusable site operating model without private reference data', () => {
+    expect(operatingLayers).toHaveLength(5)
+    expect(referenceHygiene).toHaveLength(4)
   })
 })

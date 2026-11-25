@@ -10,6 +10,7 @@ All notable user-facing changes are recorded here. Versioning follows Semantic V
 - A keep/update tension matrix that compares fast creative iteration with repository governance.
 - A copyable brief, persistent launch checklist, and harness-based evidence trail.
 - A reusable Windows-local Playwright browser bridge under `tools/windows-browser-bridge`, with Chrome/Edge fallback, token-protected localhost snapshots, and end-to-end tests.
+- A sanitized five-layer site operating model, reference-hygiene rules, and generic site/content templates derived from local architectural patterns without copying identifying or sensitive data.
 
 ## [0.1.0] - 2026-11-25
 

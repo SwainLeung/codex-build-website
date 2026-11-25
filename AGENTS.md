@@ -16,6 +16,13 @@ This repository follows the AI Native Harness model. It is a Vite + React static
 - The supplied video transcript is private source material. Do not commit it or copy long passages; create original summaries and analyses only.
 - Any asset in `public/assets/` must have a known creation path, publication right, and documented placement. Never add opaque third-party media merely for visual polish.
 
+## Reference import hygiene
+
+- Before using a local or external reference, classify it as public design, generalized engineering pattern, private operating material, or sensitive configuration. Only the first two can inform repository content.
+- Transfer principles, lifecycle states, acceptance gates, and failure handling in original language. Do not copy domains, endpoints, account/contact data, credentials, absolute paths, production records, telemetry, screenshots, or unapproved assets.
+- Use `docs/operations/REFERENCE-HYGIENE.md` and the templates under `docs/templates/` for any generalized import. Treat uncertainty as sensitive and quarantine it rather than publishing it.
+- Shared capabilities belong behind a documented versioned tool or template boundary. Do not copy active runtime logic, queues, caches, browser profiles, or environment-bound configuration into a site project.
+
 ## UI quality rules
 
 - Preserve keyboard operation, semantic controls, visible focus, responsive behavior, and `prefers-reduced-motion` support.

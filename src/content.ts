@@ -25,6 +25,21 @@ export const tensions = [
   { conflict: '快速发布 × 发布门禁与恢复', keep: '保留将站点上线的低摩擦路径', update: '增加候选构建、预演、恢复入口和负责人记录', decision: '更新' },
 ]
 
+export const operatingLayers = [
+  { number: '01', title: '站点契约', summary: '把受众、可观察结果、编辑语气、视觉系统与明确边界放在可读的项目资料中。', asset: 'design.md + SITE_PROFILE.example.yml' },
+  { number: '02', title: '内容与资产生命周期', summary: '让每个条目经历 intake → plan → draft → validate → review → release → observe / quarantine，而不是从提示词直接跳到发布。', asset: 'CONTENT_ASSET_RECORD.example.md' },
+  { number: '03', title: '质量门', summary: '把结构、可访问性、响应式、性能、来源/权利、链接与交互检查拆成可重跑的门，而不是一次主观验收。', asset: 'CHECKLIST.md + automated checks' },
+  { number: '04', title: '证据与恢复', summary: '候选版本必须能指出基线、构建产物、预演证据、发布决定与恢复入口；截图不能替代完整证据链。', asset: 'release record + candidate evidence' },
+  { number: '05', title: '共享与本地边界', summary: '共享能力通过工具、模板和版本化文档复用；站点只保留自己的内容、设计与部署编排，避免复制运行逻辑或隐私配置。', asset: 'tools/ + operations docs' },
+]
+
+export const referenceHygiene = [
+  '先提取原则、状态机与验收条件；不复制具体站点内容或运行记录。',
+  '域名、地址、邮箱、账号、令牌、密钥、绝对路径与生产 ID 一律替换成类型占位符。',
+  '把真实数据改写成边界、输入、输出与失败条件；保留可验证性，不保留可识别性。',
+  '共享脚本/工具只通过明确版本与入口复用；不要拷贝运行时、凭据或环境绑定。',
+]
+
 export const checklistItems = [
   '写清受众、产品价值和唯一的主要 CTA',
   '将稳定项目上下文写入 AGENTS.md',

@@ -44,6 +44,15 @@ python scripts/harness.py check
 | `docs/harness/` | Project facts, specification, phases, decisions, and release evidence |
 | `.github/workflows/` | CI that repeats the harness checks |
 
+## Sanitized site operating model
+
+The site now includes a generalized operating model for content, assets, validation, release evidence, recovery, and shared-tool boundaries. It is an original abstraction of local reference patterns, not a copied site implementation. It deliberately excludes domains, endpoints, accounts, contact details, credentials, absolute paths, production records, and private telemetry.
+
+- `docs/operations/SITE-OPERATING-MODEL.md` — five-layer model and lifecycle.
+- `docs/operations/REFERENCE-HYGIENE.md` — import/redaction rules for future references.
+- `docs/templates/SITE_PROFILE.example.yml` — safe, non-sensitive site contract template.
+- `docs/templates/CONTENT_ASSET_RECORD.example.md` — lifecycle, rights, and privacy record template.
+
 ## Release
 
 Build output is the Vite `dist/` directory. Before any hosting release, fill the candidate SHA and evidence in `docs/harness/releases/v0.1.0.md`. Do not publish the local source transcript, credentials, or unlicensed reference imagery.

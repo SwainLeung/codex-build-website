@@ -15,6 +15,13 @@ Use this before creating a release candidate. The browser checklist is a conveni
 - [ ] Layout references inform composition only; project content and brand remain original.
 - [ ] Keyboard focus, contrast, small screens, and reduced-motion preference are manually checked.
 
+## Reference hygiene and operating model
+
+- [ ] Reference material was converted into principles, states, gates, and failure handling rather than copied verbatim.
+- [ ] No domain, endpoint, account, contact detail, credential, absolute path, production identifier, or private report entered the candidate.
+- [ ] A content or asset lifecycle state, source category, rights status, and quarantine rule are documented where applicable.
+- [ ] Shared tooling is reused through an owned entry point; no active runtime, queue, cache, or environment configuration was copied.
+
 ## Engineering and release
 
 - [ ] `npm run lint`, `npm run check:content`, `npm test`, and `npm run build` pass on the candidate commit.

@@ -1,0 +1,51 @@
+# Copy this file for a real site profile. Keep all values non-sensitive.
+project:
+  id: <PROJECT_ID>
+  lifecycle_stage: discovery # discovery | build | review | release | observe
+
+audience:
+  primary_user: <USER_TYPE>
+  observable_outcome: <USER_RESULT>
+  primary_action: <PRIMARY_ACTION>
+
+experience:
+  voice: <VOICE_GUIDANCE>
+  design_reference: design.md
+  accessibility_commitments:
+    - keyboard-operable
+    - responsive
+    - reduced-motion-supported
+
+content_and_assets:
+  canonical_source_type: <SOURCE_CATEGORY>
+  publication_rights_status: pending # pending | verified | not-applicable
+  lifecycle: intake
+  quarantine_rule: hold_when_source_or_rights_are_unclear
+
+quality_gates:
+  required:
+    - structure
+    - accessibility
+    - responsive-layout
+    - source-and-rights
+    - build-and-test
+  optional:
+    - performance-budget
+    - metadata-review
+
+release:
+  candidate_id: <COMMIT_OR_BUILD_ID>
+  rehearsal_required: true
+  recovery_strategy: rebuild_or_restore_previous_verified_candidate
+
+privacy:
+  allowed_in_repository:
+    - non-sensitive configuration names
+    - anonymized examples
+    - aggregate acceptance evidence
+  prohibited_in_repository:
+    - domains-and-endpoints
+    - accounts-and-contact-details
+    - passwords-tokens-keys-cookies
+    - absolute-machine-paths
+    - production-records-or-user-data

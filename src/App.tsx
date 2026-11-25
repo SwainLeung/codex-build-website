@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { checklistItems, promptTemplate, stages, tensions } from './content'
+import { checklistItems, operatingLayers, promptTemplate, referenceHygiene, stages, tensions } from './content'
 
 const storageKey = 'codex-website-system-checklist'
 
@@ -48,6 +48,7 @@ function App() {
         <a className="brand" href="#top" aria-label="AI LABS 网站构建系统首页">AI <span>LABS</span></a>
         <nav aria-label="页面导航">
           <a href="#stages">七阶段</a>
+          <a href="#operating-model">运营模型</a>
           <a href="#tensions">冲突对照</a>
           <a href="#launch">启动清单</a>
         </nav>
@@ -99,6 +100,14 @@ function App() {
             <div className="stage-count">{String(activeStage + 1).padStart(2, '0')} <small>/ 07</small></div>
           </article>
         </div>
+      </section>
+
+      <section className="operating shell" id="operating-model">
+        <div className="section-heading"><p className="section-label">FROM A SITE SYSTEM</p><p>从多站点经验中脱敏提炼：复制工作方式，不复制生产身份或私有运行数据。</p></div>
+        <div className="operating-grid">
+          {operatingLayers.map((layer) => <article className="operating-card" key={layer.number}><span>{layer.number}</span><h3>{layer.title}</h3><p>{layer.summary}</p><code>{layer.asset}</code></article>)}
+        </div>
+        <div className="hygiene-note"><div><p className="section-label">REFERENCE HYGIENE</p><h3>让参考变成能力，<em>不是泄露面。</em></h3></div><ol>{referenceHygiene.map((item) => <li key={item}>{item}</li>)}</ol></div>
       </section>
 
       <section className="tensions" id="tensions">
