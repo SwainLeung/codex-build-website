@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "setup": [["npm", "ci"]],
+  "lint": [["npm", "run", "lint"], ["npm", "run", "check:content"]],
+  "test": [["npm", "test"]],
+  "build": [["npm", "run", "build"]]
+}

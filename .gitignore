@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.agent-manager/
+source/
+scripts/scripts/
+*.tsbuildinfo
+.DS_Store

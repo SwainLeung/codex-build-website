@@ -1,0 +1,38 @@
+name: 迭代想法
+description: 提出一项值得验证的用户问题、功能改进或工程流程改进。
+title: "[想法] "
+body:
+  - type: input
+    id: project
+    attributes:
+      label: 项目代号或受影响组件
+      description: 填写项目卡中的代号，或写出涉及的模块。
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 谁在什么场景遇到了什么问题
+      description: 说明当前操作、观察到的结果和造成的影响。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据、相关反馈或已有 Issue
+      description: 可填脱敏后的例子、复现步骤或重复反馈的链接。
+  - type: textarea
+    id: outcome
+    attributes:
+      label: 希望改变什么，如何知道它生效了
+      description: 写出一次能观察到改进的操作或可测指标。
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 依赖、时间窗口或已知限制
+      description: 可选。若已有想法 ID 或希望纳入的版本，也在此注明。
+  - type: markdown
+    attributes:
+      value: "维护者评估后将在本 Issue 记录项目内唯一的想法 ID、决定、负责人、目标版本或复查日期。"

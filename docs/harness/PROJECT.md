@@ -1,0 +1,35 @@
+# Project card
+
+| Item | Verified project value |
+| --- | --- |
+| Project / repository / primary branch | codex-build-website / `SwainLeung/codex-build-website` / `main` |
+| User and core result | A creator can explore the seven stages, understand the tradeoffs, copy a better build brief, and leave with a checkable launch plan. |
+| Product, code, release, recovery owner | Repository owner (to be assigned in GitHub). |
+| Runtime / package manager / lock file | Node 24.15.0, npm 11.12.1, `package-lock.json`. |
+| Artifact / delivery platform / preview | Vite static `dist/`; hosting platform pending; local Vite preview is the rehearsal path. |
+| Source / test / config / documentation / output | `src/`, `src/*.test.ts`, `harness.config.json`, `docs/`, `dist/`. |
+| Style / formatting / error conventions | TypeScript + ESLint from `eslint.config.js`; user-visible failures must be explicit. |
+| Commit / PR convention | `feat:`, `fix:`, `docs:`, `chore:`; `.github/PULL_REQUEST_TEMPLATE.md`. |
+| CI and required checks | `.github/workflows/harness-ci.yml`; harness doctor and check. |
+| Last verified / baseline / maintainer | 2026-11-25 / initial candidate SHA pending / Codex + repository owner. |
+
+## End-to-end path
+
+| User entry | Modules | Data or dependency | Failure / observation | Owner |
+| --- | --- | --- | --- | --- |
+| Open page, select stage, check launch item, copy brief | `src/App.tsx`, `src/content.ts`, `src/styles.css` | Browser `localStorage` for checklist only; Google Fonts CSS | Selected stage does not update, copy fails, layout overflows | Repository owner |
+
+## Clean-environment reproduction
+
+| Stage | Real command | Prerequisite and success criterion |
+| --- | --- | --- |
+| Dependency setup | `npm ci` | Node 24 and npm 11; installs from lockfile. |
+| Static and content checks | `npm run lint && npm run check:content` | ESLint has no errors; required records and seven stages exist. |
+| Behavioral test | `npm test` | Vitest proves stage, tension, and checklist models exist. |
+| Build | `npm run build` | Vite emits `dist/`. |
+| Local smoke | `npm run dev` or `npm run preview` | Seven stages, brief copy, and persistent checklist behave at desktop and narrow width. |
+| Release and recovery | `docs/harness/releases/v0.1.0.md` | Platform is pending; rebuild/redeploy previous successful `dist/` to recover. |
+
+## Configuration and access
+
+No runtime secrets, account permissions, server data, or third-party API credentials are required. The only browser persistence is a user-local checklist value.
