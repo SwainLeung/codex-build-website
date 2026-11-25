@@ -4,7 +4,7 @@ An interactive Chinese single-page site that turns the user-provided AI LABS vid
 
 ## What is here
 
-- An interactive map of the seven stages: purpose and `AGENTS.md`, design skill, browser verification, brand `design.md`, original assets, layout inspiration, and components/performance.
+- An interactive map of the seven stages: purpose and `AGENTS.md`, design skill, browser verification, brand `DESIGN.md`, original assets, layout inspiration, and components/performance.
 - A keep/update matrix that compares rapid creative iteration with repository governance.
 - A copyable build brief and a launch checklist persisted in browser local storage.
 - Semantic HTML, keyboard-operable controls, responsive layout, and `prefers-reduced-motion` support.
@@ -65,6 +65,21 @@ Validate the included schema example with:
 
 ```bash
 npm run check:gsc-evidence
+```
+
+## Executable site contracts
+
+The project separates human-readable direction from machine-checkable constraints:
+
+- `SOUL.md` — site voice, audience, content model, product tier, pipeline, and non-sensitive access boundary.
+- `DESIGN.md` plus `config/design-contract.json` — visual intent and its versioned tokens/page-kind/release requirements.
+- `docs/operations/CAPABILITY-BOUNDARIES.md` — shared capability versus site-adapter ownership rule.
+- `docs/operations/EXECUTION-RUN-STANDARD.md` — dry-run, approval, verification, and rollback standard.
+
+Run the contract check with:
+
+```bash
+npm run check:contracts
 ```
 
 ## Release

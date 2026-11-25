@@ -19,6 +19,7 @@
 | --- | --- | --- | --- | --- |
 | Open page, select stage, check launch item, copy brief | `src/App.tsx`, `src/content.ts`, `src/styles.css` | Browser `localStorage` for checklist only; Google Fonts CSS | Selected stage does not update, copy fails, layout overflows | Repository owner |
 | Record a future search-evidence iteration | `docs/operations/GSC-EVIDENCE-LOOP.md`, `docs/templates/`, `scripts/verify-gsc-evidence.mjs` | Offline, redacted aggregate summary only | Privacy/input gate blocks the record; candidate remains proposed without owner approval | Repository owner |
+| Define or change a site contract | `SOUL.md`, `DESIGN.md`, `config/design-contract.json`, `scripts/verify-project-contracts.mjs` | Non-sensitive identity/design contract and dry-run manifest template | Missing/disabled contract, secret-like content, or unapproved apply run blocks the check | Repository owner |
 
 ## Clean-environment reproduction
 
@@ -33,7 +34,7 @@
 
 ## Configuration and access
 
-No runtime secrets, account permissions, server data, or third-party API credentials are required. The only browser persistence is a user-local checklist value. A future search-evidence loop accepts only an offline, redacted aggregate summary and does not include a live GSC connection.
+No runtime secrets, account permissions, server data, or third-party API credentials are required. The only browser persistence is a user-local checklist value. A future search-evidence loop accepts only an offline, redacted aggregate summary and does not include a live GSC connection. `SOUL.md`, design contracts, and run manifests describe only non-sensitive boundaries; they cannot authorize remote writes.
 
 ## Tool companions
 

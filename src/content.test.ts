@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { checklistItems, gscEvidenceLoop, operatingLayers, referenceHygiene, stages, tensions } from './content'
+import { checklistItems, gscEvidenceLoop, operatingContracts, operatingLayers, referenceHygiene, stages, tensions } from './content'
 
 describe('website system content', () => {
   it('contains a complete seven-stage delivery loop', () => {
@@ -20,5 +20,10 @@ describe('website system content', () => {
   it('makes the GSC iteration loop offline, reviewable, and non-automatic', () => {
     expect(gscEvidenceLoop).toHaveLength(4)
     expect(gscEvidenceLoop.map((step) => step.title)).toContain('候选而非自动化')
+  })
+
+  it('keeps executable SOUL, DESIGN, boundary, and run contracts visible', () => {
+    expect(operatingContracts).toHaveLength(4)
+    expect(operatingContracts.map((contract) => contract.label)).toEqual(['SOUL', 'DESIGN', 'BOUNDARY', 'RUN'])
   })
 })

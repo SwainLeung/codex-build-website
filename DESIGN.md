@@ -24,3 +24,7 @@ An editorial systems notebook: high craft, low decoration-for-decoration's-sake.
 
 - Put reusable, publishable raster assets in `public/assets/` with a clear filename and source record.
 - Use only assets with a known creation path and publishing rights. Do not commit raw third-party transcripts, screenshots, or unlicensed references.
+
+## Contract binding
+
+`config/design-contract.json` is the machine-readable companion to this document. It may enforce tokens, page kinds, and review requirements, but it must not contain credentials, domains, production IDs, or deployment configuration.

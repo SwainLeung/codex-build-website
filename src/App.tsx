@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { checklistItems, gscEvidenceLoop, operatingLayers, promptTemplate, referenceHygiene, stages, tensions } from './content'
+import { checklistItems, gscEvidenceLoop, operatingContracts, operatingLayers, promptTemplate, referenceHygiene, stages, tensions } from './content'
 
 const storageKey = 'codex-website-system-checklist'
 
@@ -49,6 +49,7 @@ function App() {
         <nav aria-label="页面导航">
           <a href="#stages">七阶段</a>
           <a href="#operating-model">运营模型</a>
+          <a href="#contracts">契约层</a>
           <a href="#evidence-loop">迭代闭环</a>
           <a href="#tensions">冲突对照</a>
           <a href="#launch">启动清单</a>
@@ -109,6 +110,13 @@ function App() {
           {operatingLayers.map((layer) => <article className="operating-card" key={layer.number}><span>{layer.number}</span><h3>{layer.title}</h3><p>{layer.summary}</p><code>{layer.asset}</code></article>)}
         </div>
         <div className="hygiene-note"><div><p className="section-label">REFERENCE HYGIENE</p><h3>让参考变成能力，<em>不是泄露面。</em></h3></div><ol>{referenceHygiene.map((item) => <li key={item}>{item}</li>)}</ol></div>
+      </section>
+
+      <section className="contracts shell" id="contracts">
+        <div className="section-heading"><p className="section-label">EXECUTABLE SITE CONTRACTS</p><p>将风格、边界、复用方式和执行证据写成可检查的契约；通过不代表自动批准或发布。</p></div>
+        <div className="contracts-grid">
+          {operatingContracts.map((contract) => <article className="contract-card" key={contract.label}><span>{contract.label}</span><h3>{contract.title}</h3><p>{contract.detail}</p><code>{contract.asset}</code></article>)}
+        </div>
       </section>
 
       <section className="evidence shell" id="evidence-loop">

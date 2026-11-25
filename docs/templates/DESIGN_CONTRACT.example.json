@@ -1,0 +1,31 @@
+{
+  "schema_version": "design-contract@1.0.0",
+  "project_id": "example-project",
+  "enabled": true,
+  "blocking": true,
+  "extends": "frontend-baseline@1.0.0",
+  "tokens": {
+    "ink": "#112233",
+    "paper": "#f1f1f1",
+    "field": "#ccddee",
+    "signal": "#aa3344",
+    "charge": "#ccff99"
+  },
+  "page_kinds": {
+    "editorial-system": {
+      "audience": "<USER_TYPE>",
+      "quality_weights": {
+        "hierarchy": 1,
+        "accessibility": 1,
+        "responsive": 1,
+        "performance": 1
+      }
+    }
+  },
+  "release_requirements": [
+    "responsive-evidence",
+    "keyboard-review",
+    "reduced-motion-review",
+    "visual-smoke"
+  ]
+}

@@ -11,7 +11,7 @@ export const stages: Stage[] = [
   { number: '01', title: 'Purpose & AGENTS.md', eyebrow: '先锁定目标', question: '页面为谁服务、要让他理解什么，并最终做出哪个动作？', outcome: '让 Codex 从“主题猜测”转向明确用户旅程；把上下文沉淀到 AGENTS.md。', deliverable: 'Outcome, CTA, project instructions' },
   { number: '02', title: 'Design skill', eyebrow: '建立审美护栏', question: '如何避免“看起来不错，但像所有 AI 网站”的默认视觉语言？', outcome: '用可复用的设计技能提高一般性判断，再用项目规则收紧边界。', deliverable: 'Reusable design guidance' },
   { number: '03', title: 'Browser verification', eyebrow: '看见真实页面', question: '运行成功之后，视觉、响应式与体验是否真的成立？', outcome: '让代理在浏览器中验证可见结果，而不是只相信代码与终端输出。', deliverable: 'Visual + responsive review' },
-  { number: '04', title: 'Brand design.md', eyebrow: '定义品牌系统', question: '如何让这一个品牌拥有自己的色彩、间距与细节，而不是套用模型偏好？', outcome: '使用项目级 design.md 固定视觉系统，同时保留已经有效的结构与动效。', deliverable: 'Brand visual system' },
+  { number: '04', title: 'Brand DESIGN.md', eyebrow: '定义品牌系统', question: '如何让这一个品牌拥有自己的色彩、间距与细节，而不是套用模型偏好？', outcome: '使用项目级 DESIGN.md 固定视觉系统，同时保留已经有效的结构与动效。', deliverable: 'Brand visual system' },
   { number: '05', title: 'Original assets', eyebrow: '生成归属感', question: '如何让图像不再只是填空的图库，而是与品牌和内容属于同一个系统？', outcome: '先规划，再生成与内容相关的原始资产，并以明确目录管理。', deliverable: 'Asset plan + governed assets/' },
   { number: '06', title: 'Layout inspiration', eyebrow: '借鉴而不复制', question: '如何用视觉参考改进构图，却不借走别人的品牌和内容？', outcome: '把截图/参考作为构图输入，保持自身品牌、信息结构和文案。', deliverable: 'Reference rationale + revision' },
   { number: '07', title: 'Components & performance', eyebrow: '精修并减负', question: '哪些局部组件值得替换，怎样在保留表达力时处理加载与动效成本？', outcome: '局部引入、逐项验证；以性能和无障碍约束完成最终质量收口。', deliverable: 'Component change + performance evidence' },
@@ -26,7 +26,7 @@ export const tensions = [
 ]
 
 export const operatingLayers = [
-  { number: '01', title: '站点契约', summary: '把受众、可观察结果、编辑语气、视觉系统与明确边界放在可读的项目资料中。', asset: 'design.md + SITE_PROFILE.example.yml' },
+  { number: '01', title: '站点契约', summary: '把受众、可观察结果、编辑语气、视觉系统与明确边界放在可读的项目资料中。', asset: 'SOUL.md + DESIGN.md' },
   { number: '02', title: '内容与资产生命周期', summary: '让每个条目经历 intake → plan → draft → validate → review → release → observe / quarantine，而不是从提示词直接跳到发布。', asset: 'CONTENT_ASSET_RECORD.example.md' },
   { number: '03', title: '质量门', summary: '把结构、可访问性、响应式、性能、来源/权利、链接与交互检查拆成可重跑的门，而不是一次主观验收。', asset: 'CHECKLIST.md + automated checks' },
   { number: '04', title: '证据与恢复', summary: '候选版本必须能指出基线、构建产物、预演证据、发布决定与恢复入口；截图不能替代完整证据链。', asset: 'release record + candidate evidence' },
@@ -47,14 +47,21 @@ export const gscEvidenceLoop = [
   { number: '04', title: '发布后回测', detail: '沿用同一组聚合信号进行观察；只有有证据的改善才保留，负面或不确定结果进入回退或复盘。' },
 ]
 
+export const operatingContracts = [
+  { label: 'SOUL', title: '内容与语气', detail: '把受众、表达边界、内容模型、产品层级和访问边界写成可审查的站点人格；它不保存账号或凭据。', asset: 'SOUL.md' },
+  { label: 'DESIGN', title: '视觉可校验', detail: '人读的视觉方向与机读的 token、页面类型和发布要求配对，避免“好看”无法复验。', asset: 'DESIGN.md + design-contract.json' },
+  { label: 'BOUNDARY', title: '共享不串料', detail: '共享能力只有 schema、验证和测试；本站 adapter 只绑定本站内容与执行顺序，不能复制共享实现。', asset: 'CAPABILITY-BOUNDARIES.md' },
+  { label: 'RUN', title: '执行可回退', detail: '默认 dry-run，记录输入指纹、验证、批准和回退；预览与检查通过都不等于已发布。', asset: 'RUN_MANIFEST.example.json' },
+]
+
 export const checklistItems = [
   '写清受众、产品价值和唯一的主要 CTA',
   '将稳定项目上下文写入 AGENTS.md',
-  '加载并审查适用的设计技能与品牌 design.md',
+  '加载并审查适用的设计技能、SOUL.md 与品牌 DESIGN.md',
   '用浏览器检查视觉、移动端和关键交互',
   '让原创资产与内容、品牌和目录规范相匹配',
   '记录布局参考，避免复制其品牌与内容',
   '验证组件、动效、性能、无障碍与交付检查',
 ]
 
-export const promptTemplate = `Build one focused website experience.\n\nAudience: [who + context]\nPurpose: [what they must understand]\nPrimary CTA: [one measurable action]\nVisual system: [brand design.md + references]\nAssets: [original asset plan and allowed directory]\nMust keep: [existing constraints]\nVerify: [browser, responsive, lint, test, build]\n\nFirst return: a concise plan, assumptions, source/permission concerns, and tensions needing a decision. Then implement one reversible vertical slice and show the evidence.`
+export const promptTemplate = `Build one focused website experience.\n\nAudience: [who + context]\nPurpose: [what they must understand]\nPrimary CTA: [one measurable action]\nVoice: [SOUL.md]\nVisual system: [DESIGN.md + design contract + references]\nAssets: [original asset plan and allowed directory]\nMust keep: [existing constraints]\nVerify: [browser, responsive, lint, test, build]\n\nFirst return: a concise plan, assumptions, source/permission concerns, and tensions needing a decision. Then implement one reversible vertical slice and show the evidence.`

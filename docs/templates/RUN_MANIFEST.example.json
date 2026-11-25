@@ -1,0 +1,20 @@
+{
+  "schema_version": "run-manifest@1.0.0",
+  "run_id": "example-contract-review",
+  "project_id": "example-project",
+  "mode": "dry-run",
+  "status": "validated",
+  "inputs": [
+    { "kind": "contract", "fingerprint": "sha256:example" }
+  ],
+  "verification": [
+    { "check": "static-contract-review", "status": "pass" }
+  ],
+  "approval": {
+    "state": "not-required",
+    "owner_role": "<RESPONSIBLE_ROLE>"
+  },
+  "rollback": {
+    "strategy": "restore-previous-verified-candidate"
+  }
+}

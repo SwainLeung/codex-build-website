@@ -10,7 +10,9 @@ audience:
 
 experience:
   voice: <VOICE_GUIDANCE>
-  design_reference: design.md
+  soul_reference: SOUL.md
+  design_reference: DESIGN.md
+  design_contract: config/design-contract.json
   accessibility_commitments:
     - keyboard-operable
     - responsive

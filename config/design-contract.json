@@ -1,0 +1,31 @@
+{
+  "schema_version": "design-contract@1.0.0",
+  "project_id": "codex-build-website",
+  "enabled": true,
+  "blocking": true,
+  "extends": "frontend-baseline@1.0.0",
+  "tokens": {
+    "ink": "#17221d",
+    "paper": "#eae8e1",
+    "field": "#d7dfd4",
+    "signal": "#e84f32",
+    "charge": "#d7ff8a"
+  },
+  "page_kinds": {
+    "editorial-system": {
+      "audience": "creator-learning-a-workflow",
+      "quality_weights": {
+        "hierarchy": 1,
+        "accessibility": 1,
+        "responsive": 1,
+        "performance": 1
+      }
+    }
+  },
+  "release_requirements": [
+    "responsive-evidence",
+    "keyboard-review",
+    "reduced-motion-review",
+    "visual-smoke"
+  ]
+}

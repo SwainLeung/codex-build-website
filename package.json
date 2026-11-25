@@ -7,10 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "test": "vitest run && npm run test:gsc-evidence",
+    "test": "vitest run && npm run test:gsc-evidence && npm run test:contracts",
     "test:gsc-evidence": "node --test scripts/verify-gsc-evidence.node-test.mjs",
     "check:gsc-evidence": "node scripts/verify-gsc-evidence.mjs",
-    "check:content": "node scripts/verify-content.mjs && node scripts/verify-reference-hygiene.mjs && npm run check:gsc-evidence",
+    "check:contracts": "node scripts/verify-project-contracts.mjs",
+    "test:contracts": "node --test scripts/verify-project-contracts.node-test.mjs",
+    "check:content": "node scripts/verify-content.mjs && node scripts/verify-reference-hygiene.mjs && npm run check:gsc-evidence && npm run check:contracts",
     "preview": "vite preview"
   },
   "dependencies": {

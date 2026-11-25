@@ -1,0 +1,18 @@
+{
+  "schema_version": "design-change-batch@1.0.0",
+  "batch_id": "<BATCH_ID>",
+  "project_id": "<PROJECT_ID>",
+  "scope": {
+    "page_kinds": ["editorial-system"],
+    "components": ["<COMPONENT_NAME>"],
+    "reason": "<USER_VISIBLE_DESIGN_PROBLEM>"
+  },
+  "phases": {
+    "baseline": { "status": "pending", "input_fingerprints": [] },
+    "design": { "status": "pending", "proposed_tokens": [] },
+    "adjustment": { "status": "pending", "changed_paths": [], "rollback": "<RECOVERY_ACTION>" },
+    "verification": { "status": "pending", "responsive": null, "accessibility": null, "visual_smoke": null, "performance": null },
+    "acceptance": { "status": "pending", "owner_role": "<RESPONSIBLE_ROLE>", "decision": null },
+    "release": { "status": "pending", "external_publish_allowed": false }
+  }
+}

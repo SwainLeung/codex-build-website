@@ -6,7 +6,7 @@ Use this before creating a release candidate. The browser checklist is a conveni
 
 - [ ] One audience, one primary outcome, and one CTA are explicit.
 - [ ] Statements derived from references are summarized rather than copied; sources and permissions are recorded.
-- [ ] `AGENTS.md`, `design.md`, and the relevant `docs/harness/specs/` record agree on the project boundary.
+- [ ] `AGENTS.md`, `SOUL.md`, `DESIGN.md`, `config/design-contract.json`, and the relevant `docs/harness/specs/` record agree on the project boundary.
 
 ## Design and assets
 
@@ -28,6 +28,13 @@ Use this before creating a release candidate. The browser checklist is a conveni
 - [ ] `npm run check:gsc-evidence` passes for the summary schema before a candidate is discussed.
 - [ ] Every proposed action is reversible, names a measured signal and uncertainty, and has explicit owner approval.
 - [ ] No search-evidence record directly edits, deploys, or publishes a site; ordinary review and release gates still apply.
+
+## Executable site contracts
+
+- [ ] `SOUL.md` has complete voice, site, content-model, tier, pipeline, and access sections with no credential-like values.
+- [ ] `DESIGN.md` and `config/design-contract.json` agree on the visual system; the design contract is enabled, blocking, and versioned.
+- [ ] A shared capability owns only reusable validation/analysis; a site adapter owns only the site-specific invocation and cannot copy the shared implementation.
+- [ ] Any material operation uses a dry-run by default and records inputs, verification, approval state, and a rollback strategy before apply mode.
 
 ## Engineering and release
 

@@ -12,7 +12,7 @@ This repository follows the AI Native Harness model. It is a Vite + React static
 
 - Source: `src/`; static publishable assets: `public/assets/`; build output: `dist/`.
 - Run the real commands declared in `harness.config.json`. When Codex can perform a check itself, it must do so and report the command and result rather than asking the user to run it.
-- `design.md` is visual direction. `docs/harness/` holds project facts, acceptance conditions, decisions, and release evidence.
+- `SOUL.md` is editorial/site identity and `DESIGN.md` is visual direction; `config/design-contract.json` is their machine-readable companion. `docs/harness/` holds project facts, acceptance conditions, decisions, and release evidence.
 - The supplied video transcript is private source material. Do not commit it or copy long passages; create original summaries and analyses only.
 - Any asset in `public/assets/` must have a known creation path, publication right, and documented placement. Never add opaque third-party media merely for visual polish.
 
